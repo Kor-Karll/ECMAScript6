@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // 함수 스코프 변수 선언
+        
+        var a = 12; // 전역 접근 가능
+        function myFunction()
+        {
+            console.log(a);
+
+            var b = 13; // 함수 안에서 접근 가능
+
+            if(true)
+            {
+                var c = 14; // 함수 안에서 접근 가능
+                console.log(b);
+            }
+            
+            console.log(c);
+        }
+
+        myFunction();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
