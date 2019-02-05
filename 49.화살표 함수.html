@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+       // 화살표 함수
+
+       var circleArea = function(pi , r) {
+           var area = pi * r * r;
+           return area;
+       } 
+
+       var result = circleArea(3.14, 3);
+
+       console.log(result); //28.26
+
+       // ES6 화살표 함수로 변환
+
+       let circleArea = (pi, r) => {
+           let area = pi * r * r;
+           return area;
+       }
+
+       let result = circleArea(3.14, 3);
+
+       // 문이 하나밖에 없는 화살표 함수는 {} 기호를 생략할 수 있다
+       
+       let circleArea = (pi , r) => pi * r * r;
+       let result = circleArea(3.14, 3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
