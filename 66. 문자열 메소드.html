@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // 문자열 메소드
+
+        // codePointAt(index) 메소드
+        // 주어진 인덱스의 캐릭터에 해당하는 코드 포인트를 음이 아닌 정수로 반환
+
+        console.log("\uD83D".codePointAt(1)); // 56977
+
+        // String.fromCodePoint(number1, ... number2) 메소드
+        // 코드 포인트 뭉치를 입력받아 해당 문자열을 반환
+
+        console.log(String.fromCodePoint(0x61, 0x62, 0x63)); // abc
+        console.log("\u0061\u0062" == String.fromCodePoint(0x61,0x62)); // true
+
+        // repeat(count) 메소드
+        // 문자열을 원하는 개수만큼 복사하여 연결된 문자열을 반환
+
+        console.log("ㅋ".repeat(6)); // "ㅋㅋㅋㅋㅋㅋ"
+
+        // includes(string, index) 메소드
+        // 주어진 문자열이 있느지 찾아보고 그 결과를 true/false로 반환
+
+        var str = "안녕, 나는 자바스크립트 개발자야";
+        console.log(str.includes("자바스크립트")); // true
+
+        console.log(str.includes("자바스크립트", 13)); // false 13인덱스 이후부터 포함하는지 여부
+
+        // startsWith(string, index) 메소드
+        // 주어진 문자열로 시작하는지 여부를 true/false 로 반환
+
+        console.log(str.startsWith("안녕, 나는")); // true
+
+        console.log(str.startsWith("안녕, 나는", 7)); // false
+
+        // endsWith(string, index) 메소드
+        // 주어진 문자열로 끝나는지 확인하는 메소드    
+
+        console.log(str.endsWith("개발자야")); // ture
+        console.log(str.endsWith("개발자", 17)); // true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
