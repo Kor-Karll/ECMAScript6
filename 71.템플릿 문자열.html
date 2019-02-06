@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // 템플릿 문자열
+
+        let a = 20;
+        let b = 10;
+        let c = "자바스크립트";
+        let str = `나는 ${a+b}살이고 ${c}를 좋아해`;
+
+        console.log(str);
+
+        let tag = function(strings, ...values)
+        {
+            let result = "";
+
+            for(let i = 0 ; i < strings.length ; i++)
+            {
+                result += strings[i];
+
+                if(i < values.length)
+                {
+                    result += values[i];
+                }
+            }
+
+            return result;
+        };
+
+        let str2 = tag`나는 ${a+b}살이고 ${c}를 좋아해`;
+
+        console.log(str2);
+
+        // 여러줄 문자열
+
+        console.log("1\n2\n3");
+
+        /* 실행결과
+        1
+        2
+        3
+        */
+
+        console.log(`1
+        2
+        3
+        `);
+
+        // 원래 문자열
+        
+        let s = String.raw `xy\n${ 1 + 1}z`;
+        console.log(s); // xy\n2z
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
