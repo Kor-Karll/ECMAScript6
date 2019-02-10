@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // 콜렉션
+        // 배열 버퍼
+
+        let buffer = new ArrayBuffer(80);
+        let view = new DataView(buffer);
+
+        view.setInt32(8,22,false);
+
+        var number = view.getInt32(8,false);
+
+        console.log(number); // 22
+
+        // DataView(offset,number,endian) 숫자를 써넣을 바이트, 저장할 숫자, false가 빅 엔디안
+
+        /*
+            setInt8     8비트로 숫자를 저장, 부호있는 정수
+            setUnit8    8비트로 숫자를 저장, 부호 없는 정수
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
